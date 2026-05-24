@@ -1,0 +1,82 @@
+@font-face {
+  font-family: AL;
+  src: url(../public/font/AusterRounded-Light.ttf);
+}
+
+@font-face {
+  font-family: AM;
+  src: url(../public/font/AusterRounded-Medium.ttf);
+}
+
+@font-face {
+  font-family: AR;
+  src: url(../public/font/AusterRounded-Regular.ttf);
+}
+
+@font-face {
+  font-family: ASB;
+  src: url(../public/font/AusterRounded-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: AT;
+  src: url(../public/font/AusterRounded-Thin.ttf);
+}
+
+@font-face {
+  font-family: RB;
+  src: url(../public/font/Reznik-Bold.ttf);
+}
+
+@font-face {
+  font-family: RH;
+  src: url(../public/font/Reznik-Heavy.ttf);
+}
+
+@font-face {
+  font-family: RL;
+  src: url(../public/font/Reznik-Light.ttf);
+}
+
+@font-face {
+  font-family: RM;
+  src: url(../public/font/Reznik-Medium.ttf);
+}
+
+@font-face {
+  font-family: RU;
+  src: url(../public/font/Reznik-UltraLight.ttf);
+}
+
+:root {
+  --primary-color: #111;
+  --secondary-color: #fff;
+
+  --primary-bg-color: #E6E3DC;
+  --secondary-bg-color: #00343A;
+  --thired-bg-color: #FDFAF1;
+  --fourth-bg-color: #111;
+  --fifth-bg-color: #FDFAF1;
+  --sixth-bg-color: #c2d8da;
+}
+
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  padding: 5px 10px 0px 10px;
+  // background-color: var(--primary-bg-color);
+  color: var(--primary-color);
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--primary-bg-color);
+  position: relative;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
