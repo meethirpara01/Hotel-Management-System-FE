@@ -1,0 +1,238 @@
+.LoginPage {
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    padding-top: 5rem;
+
+    .content {
+        width: 80%;
+        height: 100%;
+        display: flex;
+        padding: 20px;
+        background-color: var(--fourth-bg-color);
+
+
+        .left-part {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 30px 10px;
+            background-color: var(--secondary-bg-color);
+            background-image: url(../../../../assets/photo-1664347759774-aff97954de48.avif);
+            background-position: center;
+            background-size: cover;
+            border-radius: 30px;
+
+            h4 {
+                font-family: RM;
+                color: var(--secondary-color);
+                font-size: 2.5rem;
+                line-height: 0.8;
+                word-spacing: -5px;
+                background-color: transparent;
+            }
+
+            .textContent {
+                font-family: RM;
+
+                background-color: transparent;
+
+
+                p {
+                    font-family: AL;
+                    color: var(--secondary-color);
+                    font-size: 1.5rem;
+                    line-height: 0.9;
+                    word-spacing: -1px;
+                    padding: 0;
+                    background-color: transparent;
+                }
+            }
+
+        }
+
+        .right-part {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 2rem;
+            background-color: transparent;
+            padding-left: 50px;
+
+            .textContent {
+                width: 100%;
+                background-color: transparent;
+
+                h4 {
+                    font-family: Al;
+                    color: var(--secondary-color);
+                    font-size: 1.5rem;
+                    line-height: 0.8;
+                    word-spacing: -5px;
+                    background-color: transparent;
+                }
+
+                h2 {
+                    font-family: RM;
+                    color: var(--secondary-color);
+                    font-size: 2.5rem;
+                    line-height: 0.8;
+                    word-spacing: -5px;
+                    background-color: transparent;
+                }
+            }
+
+
+            .form {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background-color: transparent;
+                gap: 2rem;
+
+                .inputContent {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    background-color: transparent;
+                    padding: 0;
+                    // gap: 0.5rem;
+
+
+                    label {
+                        font-family: AL;
+                        font-size: 1.4rem;
+                        color: var(--secondary-color);
+                        background-color: transparent;
+                    }
+
+                    .inputBlock {
+                        width: 100%;
+                        background-color: transparent;
+
+                        input {
+                            width: 80%;
+                            font-family: AL;
+                            font-size: 1.4rem;
+                            background-color: transparent;
+                            color: var(--secondary-color);
+                            border: none;
+                            border-bottom: 1px solid var(--secondary-color);
+                            border-radius: 10px;
+                            outline: none;
+                            padding: 2px;
+                            padding-left: 10px;
+                        }
+
+                        .forgotPassword {
+                            margin-top: 10px;
+                            background-color: transparent;
+                            padding: 0;
+
+                            .forgotPasswordLink {
+                                background-color: transparent;
+                                font-family: AL;
+                                color: var(--secondary-color);
+                                text-decoration: none;
+                            }
+                        }
+
+                        .selectField {
+                            padding: 10px 20px;
+                            font-family: AL;
+                            font-size: 1.2rem;
+                            appearance: none;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            cursor: pointer;
+                            background-color: var(--primary-bg-color);
+                            border: none;
+                            border-radius: 10px;
+
+                            .submitBtn:active {
+                                border: none;
+                            }
+                        }
+
+                        .errorDiv {
+                            font-family: AL;
+                            color: red;
+                            // color: var(--secondary-color);
+                            background-color: transparent;
+                        }
+
+
+                    }
+                }
+
+                .submitBtn {
+                    margin-left: 1rem;
+                    width: fit-content;
+                    padding: 0.6rem 2rem;
+                    border: none;
+                    font-family: AR;
+                    cursor: pointer;
+                    font-size: 1.4rem;
+                    background-color: var(--primary-bg-color);
+                }
+
+                .submitBtn:hover {
+                    color: var(--secondary-color);
+                    background-color: var(--secondary-bg-color);
+                }
+
+                .submitBtn:active {
+                    scale: 0.95;
+                }
+            }
+
+            .registerLink {
+
+                p {
+                    font-size: 1.1rem;
+                    font-family: AL;
+                    color: var(--secondary-color);
+
+                    .menu {
+                        font-size: 1.1rem;
+                        font-family: AL;
+                        text-decoration: none;
+                        color: red;
+                    }
+
+                    .menu:active {
+                        scale: 1.5;
+                    }
+                }
+            }
+        }
+    }
+
+    .tost {
+        background-color: transparent;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .LoginPage {
+        .content {
+            .left-part {
+                width: 40%;
+            }
+
+            .right-part {
+                width: 60%;
+            }
+        }
+    }
+}
