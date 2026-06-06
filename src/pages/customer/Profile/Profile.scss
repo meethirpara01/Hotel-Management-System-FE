@@ -1,9 +1,498 @@
 .profile {
     width: 100%;
-    margin-top: 8rem;
+    display: flex;
+    gap: 1rem;
+    margin-top: 6rem;
 
-    h4 {
-        font-family: AL;
-        font-size: 3rem;
+
+    .sideBar {
+        width: 17%;
+        height: 85vh;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--fifth-bg-color);
+        border: none;
+        border-radius: 15px;
+
+        .userDetailPart {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.8rem;
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+            .UserImage {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                padding: 3px;
+                background-color: var(--secondary-bg-color);
+
+                img {
+                    width: 100%;
+                    aspect-ratio: 1/1;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    object-position: top;
+                    padding: 0;
+                }
+            }
+
+            .UserDetails {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0;
+                padding: 0;
+
+                h4 {
+                    padding: 0;
+                    font-family: AT;
+                    font-size: 1.5rem;
+                }
+
+                p {
+                    padding: 0;
+                    font-family: AL;
+                    font-size: 1.2rem;
+                }
+
+            }
+
+
+        }
+
+        .line {
+            width: 100%;
+            height: 1px;
+            margin: 0 20px;
+            align-self: center;
+            border-top: 1px solid var(--secondary-bg-color);
+        }
+
+        .accountPart {
+            width: 100%;
+            margin-top: 10px;
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+
+            p {
+                font-family: AL;
+                padding: 0;
+            }
+
+            .menus {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                padding: 10px;
+
+                .menu {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    padding: 5px 5px;
+                    border: 1px solid var(--secondary-bg-color);
+                    border-radius: 10px;
+                    cursor: pointer;
+
+                    .icon {
+                        font-size: 1.5rem;
+                        align-self: center;
+                    }
+
+                    p {
+                        font-family: AR;
+                        font-size: 1.2rem;
+                    }
+                }
+
+                .menu:hover {
+                    background-color: var(--secondary-bg-color);
+
+                    .icon {
+                        color: white;
+                    }
+
+                    p {
+                        color: white;
+                    }
+                }
+
+                .menu:active {
+                    background-color: var(--secondary-bg-color);
+                    scale: 0.95;
+                }
+
+                .logout:hover {
+                    background-color: rgb(253, 125, 125);
+                    scale: 0.95;
+                }
+
+                .logout:active {
+                    background-color: rgb(253, 125, 125);
+                    scale: 0.95;
+                }
+            }
+        }
+    }
+
+    .mainContent {
+        width: 80%;
+        height: 85vh;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        overflow-y: scroll;
+        // background-color: var(--fifth-bg-color);
+        // padding: 1rem;
+
+        .userDashBoard {
+            width: 100%;
+            border-radius: 20px;
+            background-color: var(--fifth-bg-color);
+            padding: 0;
+
+            .themeBackground {
+                width: 100%;
+                height: 25vh;
+                background-color: var(--secondary-bg-color);
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+            }
+
+            .profilePic {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                padding: 10px 50px;
+                position: relative;
+                // background-color: red;
+                padding-bottom: 50px;
+
+                .UserImage {
+                    width: 130px;
+                    height: 130px;
+                    border-radius: 50%;
+                    padding: 3px;
+                    background-color: var(--secondary-bg-color);
+                    position: absolute;
+                    left: 2%;
+
+                    img {
+                        width: 100%;
+                        aspect-ratio: 1/1;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        object-position: top;
+                        padding: 0;
+                        cursor: pointer;
+                    }
+
+                    img:hover {
+                        opacity: 0.5;
+                    }
+                }
+
+                .editProfileButton {
+                    padding: 10px 20px;
+                    border: 1px solid var(--secondary-bg-color);
+                    border-radius: 20px;
+                    font-family: AL;
+                    font-size: 1.2rem;
+                    background-color: #fff;
+                    cursor: pointer;
+                }
+            }
+
+            .userContent {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                padding-bottom: 50px;
+
+                .UserDetails {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0;
+                    padding-left: 2rem;
+
+                    h4 {
+                        padding: 0;
+                        font-family: AL;
+                        color: var(--secondary-bg-color);
+                        font-size: 2rem;
+                    }
+
+                    p {
+                        padding: 0;
+                        font-family: AL;
+                        font-size: 1.3rem;
+                    }
+                }
+
+                .tags {
+                    width: 100%;
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+                    padding-left: 2rem;
+
+                    .customerTag {
+                        width: fit-content;
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        padding: 5px 15px;
+                        background-color: #b3d6da;
+                        border: 1px solid var(--secondary-bg-color);
+                        border-radius: 20px;
+
+                        i {
+                            padding: 0;
+                            font-size: 1rem;
+                            color: var(--secondary-bg-color);
+                        }
+
+                        p {
+                            padding: 0;
+                            font-family: RM;
+                            color: var(--secondary-bg-color);
+                            align-self: center;
+                        }
+                    }
+
+                    .membership {
+                        width: fit-content;
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        padding: 5px 15px;
+                        background-color: #f5f2ed;
+                        border: 1px solid var(--primary-bg-color);
+                        border-radius: 20px;
+
+                        p {
+                            padding: 0;
+                            font-family: RM;
+                            color: rgb(104, 104, 104);
+                            align-self: center;
+                        }
+                    }
+
+                }
+
+                .components {
+                    width: 100%;
+                    height: fit-content;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    gap: 1rem;
+
+                    .singleComp {
+                        width: 100%;
+                        height: fit-content;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        gap: 1rem;
+                        padding: 20px;
+                        background-color: antiquewhite;
+                        border-radius: 15px;
+
+                        p {
+                            padding: 0;
+                            font-family: RM;
+                            font-size: 1.2rem;
+                            color: rgb(104, 104, 104);
+                        }
+
+                        .content {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            padding: 0;
+                            gap: 0;
+
+                            .count {
+                                padding: 0;
+                                font-family: AL;
+                                font-size: 3rem;
+                                color: rgb(104, 104, 104);
+                            }
+
+                            .countDetail {
+                                padding: 0;
+                                font-family: AR;
+                                font-size: 1rem;
+                                color: rgb(104, 104, 104);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .slider {
+            width: fit-content;
+            display: flex;
+            gap: 2rem;
+
+            p {
+                font-size: 1.5rem;
+                font-family: AM;
+                padding-bottom: 10px;
+                cursor: pointer;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 0%;
+                    height: 5%;
+                    left: 0;
+                    bottom: -5px;
+                    background-color: var(--secondary-bg-color);
+                    transition: 0.4s;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+
+            p:hover {
+                color: var(--secondary-bg-color);
+            }
+        }
+
+        .personalInfo {
+            width: 100%;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            background-color: var(--fifth-bg-color);
+            border-radius: 20px;
+            padding: 20px;
+
+            .title {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                p {
+                    font-family: AL;
+                    font-size: 2rem;
+                }
+
+                .editProfileButton {
+                    padding: 10px 20px;
+                    border: 1px solid var(--secondary-bg-color);
+                    border-radius: 20px;
+                    font-family: AL;
+                    font-size: 1.2rem;
+                    background-color: #fff;
+                    cursor: pointer;
+                }
+            }
+
+            .line {
+                width: 100%;
+                height: 1px;
+                align-self: center;
+                border-top: 1px solid var(--secondary-bg-color);
+            }
+
+            .updationForm {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                .MultipleInputContent {
+                    width: 100%;
+                    display: flex;
+
+                    .inputContent {
+                        width: 50%;
+
+                        label {
+                            font-family: AL;
+                            font-size: 1.5rem;
+                        }
+
+                        .inputBlock {
+                            width: 100%;
+
+                            input {
+                                width: 90%;
+                                padding: 8px;
+                                border: 1px solid var(--primary-bg-color);
+                                background-color: var(--fifth-bg-color);
+                                border-radius: 10px;
+                                font-family: AR;
+                                font-size: 1.4rem;
+                            }
+
+                            .errorDiv {
+                                font-family: AL;
+                                color: red;
+                                // color: var(--secondary-color);
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                }
+
+                .savebtn {
+                    width: 10%;
+                    height: fit-content;
+                    align-self: flex-end;
+                    margin-left: 1.5rem;
+                    padding: 0.3rem 1.5rem;
+                    font-family: AR;
+                    color: var(--primary-color);
+                    font-size: 1.4rem;
+                    cursor: pointer;
+                    background-color: var(--primary-bg-color);
+                    border-radius: 10px;
+                }
+
+                .savebtn:hover {
+                    background-color: var(--secondary-bg-color);
+                    color: var(--secondary-color);
+                }
+
+                .savebtn:active {
+                    scale: 0.95;
+                }
+            }
+        }
+    }
+
+    .mainContent::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media (max-width: 1250px) {
+    .profile {
+
+        .sideBar {
+            width: 24%;
+        }
     }
 }

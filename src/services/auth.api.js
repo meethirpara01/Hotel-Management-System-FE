@@ -32,6 +32,11 @@ export const getMe = async () => {
     return response.data;
 }
 
+export const updateUserData = async (user) => {
+    const response = await api.post('/updateProfile', user);    
+    return response.data;
+}
+
 export const logout = async () => {
     const response = await api.get('/logout');    
     return response.data;

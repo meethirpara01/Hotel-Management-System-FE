@@ -11,7 +11,7 @@ const MyBookings = () => {
   const { myBookings } = bookingActions();
 
   useEffect(() => {
-    myBookings();
+    // myBookings();
     console.log(userBookings);
   }, []);
 

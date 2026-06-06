@@ -20,6 +20,17 @@ const CustomerLayout = () => {
     console.log(currentUser);
   }, [currentUser]);
 
+  const { userBookings, loading } = useSelector(state => state.bookings);
+  const { myBookings } = bookingActions();
+
+  useEffect(() => {
+    myBookings();
+  }, []);
+
+  useEffect(() => {
+    console.log(userBookings);
+  }, [userBookings]);
+
   return (
     <>
       <Navbar />
